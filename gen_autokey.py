@@ -46,10 +46,7 @@ encode_file_name_dict = {
 }
 
 def encode_file_name(abbrev):
-    l = []
-    for c in abbrev:
-        l.append(encode_file_name_dict.get(c, c))
-    return ''.join(l)
+    return ''.join(encode_file_name_dict.get(c, c) for c in abbrev)
 
 def file_push(fname, data):
     with open(fname, "w") as f:
@@ -95,22 +92,15 @@ def rule_combine(fmtr, line):
 def rule_gen_zip(fmtr, names):
     # print(list(names))
     gen = iter(names)
-
-    def rule(line):
-        return fmtr(next(gen)), line.strip()
-    return rule
+    return lambda line: (fmtr(next(gen)), line.strip())
 
 def formatter(fmt):
-    def replace(char):
-        return fmt.replace('_', char)
-    return replace
+    return lambda char: fmt.replace('_', char)
 
 def processor_rule(line):
     lr = line.split(';', 1)
     l = lr[0].strip()
-    r = None
-    if len(lr) == 2:
-        r = lr[1].strip()
+    r = lr[1].strip() if len(lr) == 2 else None
 
     ls = l.split()
     # print(lr, l, r, ls)
