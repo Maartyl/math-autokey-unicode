@@ -9,17 +9,6 @@ keyboard.send_keys("<ctrl>+<shift>+u%s")
 keyboard.send_keys("<ctrl>")
     """ % replacement
 
-    # """
-    # import time
-    # clip = clipboard.get_clipboard()
-
-    # clipboard.fill_clipboard(u"<placeholder>")
-    # keyboard.send_keys("<ctrl>+v")
-
-    # time.sleep(0.05)
-    # clipboard.fill_clipboard(clip)
-    # """
-
 t_json = {'filter': {'regex': None, 'isRecursive': False},
           'omitTrigger': False,
           'store': {},
