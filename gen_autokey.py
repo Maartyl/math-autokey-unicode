@@ -39,7 +39,7 @@ t_json = {'filter': {'regex': None, 'isRecursive': False},
 
 def template_json(abbrev):
     z = deepcopy(t_json)
-    z["abbreviation"]["abbreviations"].append(abbrev)
+    z["abbreviation"]["abbreviations"] = [abbrev]
     # extra changes to tree
     return json.dumps(z)
 
@@ -68,7 +68,7 @@ def file_push(fname, data):
 
 def template_run(abbrev, replacement):
     # h = "\\U" + hex(ord(replacement))[2:].zfill(8)  # char -> num -> hex to 8 places
-    h = hex(ord(replacement))[2:]  # char -> num -> hex (without 0x)
+    h = '%x' % (ord(replacement))  # char -> num -> hex
 
     fname = encode_file_name(abbrev)
     fname_json = '.' + fname + '.json'

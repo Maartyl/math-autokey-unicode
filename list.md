@@ -61,12 +61,11 @@ $ ``_
 𝛆  e
 𝛇  z # zeta
 𝛈  n #? eta
-𝛉  h # theta
+𝛉  f # theta # why f? ... feels like it
 𝛊  i # iota
 𝛋  k # kappa
 𝛌  l
 𝛍  m
-# 𝛎  do I want this? - nu
 𝛏  x
 𝛑  p
 𝛒  r
@@ -74,10 +73,13 @@ $ ``_
 𝛔  s # (norm.) sigma
 𝛕  t
 𝛖  y # upsilon
-# 𝛗  # phi
+𝛗 h # phi
 # 𝛘  # chi
 # 𝛙  # psi
 𝛚  w # omega
+
+# 𝛎  do I want this? - nu
+
 # 𝛛  partial derivation  !!!
 # ∂
 # 𝛝  special theta
@@ -211,8 +213,6 @@ $ `/_ ; a..z
 𝔁
 𝔂
 𝔃
-
-
 
 
 
