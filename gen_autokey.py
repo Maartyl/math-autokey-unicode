@@ -104,7 +104,7 @@ def rule_combine(fmtr, line):
     return fmtr(ls[1]), ls[0]
 
 def rule_gen_zip(fmtr, names):
-    # print([a for a in names])
+    # print(list(names))
     gen = iter(names)
 
     def rule(line):
@@ -148,12 +148,9 @@ def remove_comment_norm(line):
     """ remove comment (#...) from line  and normalize (strip)"""
     return line[:line.find('#')].strip()
 
-def nonempty(x):
-    return x != ""
-
 def main_loop(lines):
     p = proc_err
-    for line in filter(nonempty, map(remove_comment_norm, lines)):
+    for line in filter(None, map(remove_comment_norm, lines)):
         if line[0] == '$':
             p = processor(line)
         else:
