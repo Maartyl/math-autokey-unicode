@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SRCPATH="$HOME/Dropbox/Dev/math/kate-greek-snippets"
+SRCPATH="$HOME/Dropbox/Dev/math/autokey-unicode-abbreviations"
 
 mkcd(){
     mkdir -p "$1"

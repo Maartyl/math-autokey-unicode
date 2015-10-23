@@ -19,11 +19,75 @@ $ :exact
 ⊊ \subne
 ⊋ \supne
 
+∈ \in
+∉ \nin
+∞ \inf
+
+# meta logical consequence
+∴ \so   # therfore // ->
+∵ \cuz  # because  // <-
+
+
+# turnstile
+# syntactic consequnce
+⊢ \l-
+⊢ \vdash
+
+# double turnstile
+# semantic consequence / models
+⊨ \l2-
+⊨ \models
+
+# equivalence / if and only if
+↔ \iff
+⇔ \=
+≡ \eq
+
+¬ \-
+⊕ \xor
+↑ \nand
+
+× \x # cross product
+⋅ \.
+∘ \o
+
+² \^2
+³ \^3
+
+# simple super/sub scripts
+² ^2
+³ ^3
+ⁱ ^i
+ʲ ^j
+ᵏ ^k
+ᵢ _i
+ⱼ _j
+ₖ _k
+
 $ :exact
 ⋀ \, # prolog and
 ⋁ \; # prolog or
 ⋂ \&
 ⋃ \|
+
+∅ \{}
+
+$ :exact
+⌈ \[u
+⌉ \]u
+⌊ \[d
+⌋ \]d
+
+⎛ \(u
+⎜ \(m
+⎝ \(d
+⎞ \)u
+⎟ \)m
+⎠ \)d
+
+⎵ \__
+
+### greek
 
 $ ``_
 𝚪  G
@@ -215,7 +279,6 @@ $ `/_ ; a..z
 𝔁
 𝔂
 𝔃
-
 
 
 
