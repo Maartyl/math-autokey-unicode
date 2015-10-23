@@ -74,15 +74,17 @@ $ ``_
 𝛕  t
 𝛖  y # upsilon
 𝛗 h # phi
+𝛗 phi # phi
 # 𝛘  # chi
-# 𝛙  # psi
+𝛙 u # psi
+𝛙 psi # psi
 𝛚  w # omega
 
 # 𝛎  do I want this? - nu
 
 # 𝛛  partial derivation  !!!
-# ∂
-# 𝛝  special theta
+# ∂  normal partial derivation
+𝛝 _f # special theta
 # 𝛞  kappa symbol
 
 # 𝛐 nope # omicron

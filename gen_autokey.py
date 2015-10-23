@@ -6,6 +6,7 @@ from copy import deepcopy
 def template_script(replacement):
     return """
 keyboard.send_keys("<ctrl>+<shift>+u%s")
+#keyboard.send_keys("<ctrl>+<shift>+u   <ctrl>")
 keyboard.send_keys("<ctrl>")
     """ % replacement
 
@@ -15,7 +16,7 @@ t_json = {'filter': {'regex': None, 'isRecursive': False},
           'abbreviation': {'ignoreCase': False,
                            'wordChars': '[\\w]',
                            'backspace': True,
-                           'immediate': True,
+                           'immediate': False,
                            'abbreviations': [],  # add abbrev to this list
                            'triggerInside': False},
           'type': 'script',
