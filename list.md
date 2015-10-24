@@ -5,7 +5,7 @@ $ :exact
 ∄ \nex
 ∑ \sum
 ∏ \prod
-∓ \+-
+± \+-
 
 $ :exact
 ⊂ \sub
@@ -23,19 +23,21 @@ $ :exact
 ∉ \nin
 ∞ \inf
 
-# meta logical consequence
+# meta-lang logical consequence
 ∴ \so   # therfore // ->
 ∵ \cuz  # because  // <-
 
 
-# turnstile
+# turnstile / tee
 # syntactic consequnce
 ⊢ \l-
+⊢ \|-
 ⊢ \vdash
 
 # double turnstile
 # semantic consequence / models
 ⊨ \l2-
+⊨ \|=
 ⊨ \models
 
 # equivalence / if and only if
