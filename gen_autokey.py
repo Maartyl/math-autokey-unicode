@@ -18,7 +18,7 @@ t_json = {'filter': {'regex': None, 'isRecursive': False},
                            'backspace': True,
                            'immediate': False,
                            'abbreviations': [],  # add abbrev to this list
-                           'triggerInside': False},
+                           'triggerInside': True},
           'type': 'script',
           'prompt': False,
           'modes': [1],

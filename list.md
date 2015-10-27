@@ -23,6 +23,9 @@ $ :exact
 ∉ \nin
 ∞ \inf
 
+𝝺 \\     # lambda for structures; not as symbol
+∫ \int   # integral
+
 # meta-lang logical consequence
 ∴ \so   # therfore // ->
 ∵ \cuz  # because  // <-
