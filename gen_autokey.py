@@ -1,40 +1,38 @@
+#!/usr/bin/env python3
+
 import sys
 import functools
 import json
 from copy import deepcopy
 
-def template_script(replacement):
-    return """
-keyboard.send_keys("<ctrl>+<shift>+u%s")
-#keyboard.send_keys("<ctrl>+<shift>+u   <ctrl>")
-keyboard.send_keys("<ctrl>")
-    """ % replacement
-
 t_json = {'filter': {'regex': None, 'isRecursive': False},
           'omitTrigger': False,
-          'store': {},
+#           'store': {},
           'abbreviation': {'ignoreCase': False,
                            'wordChars': '[\\w]',
                            'backspace': True,
                            'immediate': False,
                            'abbreviations': [],  # add abbrev to this list
                            'triggerInside': True},
-          'type': 'script',
+          'type': 'phrase',
+          'sendMode': None,
           'prompt': False,
           'modes': [1],
           'usageCount': 0,
           'showInTrayMenu': False,
-          'description': '',
+          'description': '', #change to abbrev
           'hotkey': {'modifiers': [], 'hotKey': None}}
 
 def template_json(abbrev):
     z = deepcopy(t_json)
     z["abbreviation"]["abbreviations"] = [abbrev]
+    z["description"] = abbrev
     # extra changes to tree
     return json.dumps(z)
 
 encode_file_name_dict = {
     '`': 'backtick_',
+    '^': 'caret_',
     '/': 'slash_',
     '\\': 'backslash_',
     '|': 'pipe_',
@@ -43,6 +41,7 @@ encode_file_name_dict = {
     '+': 'plus_',
     '-': 'minus_',
     ',': 'comma_',
+    '.': 'dot_',
     ';': 'semicolon_',
 }
 
@@ -55,16 +54,17 @@ def file_push(fname, data):
 
 def template_run(abbrev, replacement):
     # h = "\\U" + hex(ord(replacement))[2:].zfill(8)  # char -> num -> hex to 8 places
-    h = '%x' % (ord(replacement))  # char -> num -> hex
+#     h = '%x' % (ord(replacement))  # char -> num -> hex
 
     fname = encode_file_name(abbrev)
     fname_json = '.' + fname + '.json'
-    fname_script = fname + '.py'
+    fname_script = fname + '.txt'
 
-    print(abbrev, h, fname_json, fname_script)
+    print(abbrev, replacement, fname_json, fname_script)
 
     file_push(fname_json, template_json(abbrev))
-    file_push(fname_script, template_script(h))
+#     file_push(fname_script, template_script(h))
+    file_push(fname_script, replacement)
 
 def char_range(start, end):
     """ a..z == char_range('a', 'z') """
