@@ -28,7 +28,7 @@ $ :exact
 
 # meta-lang logical consequence
 ∴ \so   # therfore // ->
-∵ \cuz  # because  // <-
+∵ \cuz  # because  // <-    //> only for syntax highlight
 
 
 # turnstile / tee

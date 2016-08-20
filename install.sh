@@ -9,9 +9,16 @@ mkcd(){
 
 mkcd "$HOME/.config/autokey/data/My Phrases/math-gen" && {
 
-# later improve: not delete folder file
-rm * .??*
+    # later improve: not delete folder file
+    rm * .??*
 
-python3 "$SRCPATH/gen_autokey.py" < "$SRCPATH/list.md"
+    python3 "$SRCPATH/gen_autokey.py" < "$SRCPATH/list.md" && {
+        
+        killall autokey
+        (autokey &)  # start in background
+
+    }
 
 }
+
+
